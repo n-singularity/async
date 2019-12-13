@@ -36,7 +36,7 @@ function foo(){
 #### 2. Function of Object
 
 ```php
-class Example extends BaseController
+class Example
 {
     public function sendEmail($email, $bodyEmail){
         //code to send email
