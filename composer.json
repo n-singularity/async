@@ -24,12 +24,5 @@
   },
   "autoload-dev": {
 
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Nsingularity\\async\\AsynchronousServiceProvider"
-      ]
-    }
   }
 }
