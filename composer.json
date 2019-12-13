@@ -1,0 +1,35 @@
+{
+  "name": "n-singularity/async",
+  "description": "Asynchronous for Laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adnan Adiatman",
+      "email": "adnanadiatman@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/config": "~5.1",
+    "illuminate/contracts": "~5.1",
+    "illuminate/console": "~5.1",
+    "illuminate/cache": "~5.1",
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Nsingularity\\async\\": "src/"
+    }
+  },
+  "autoload-dev": {
+
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nsingularity\\async\\AsynchronousServiceProvider"
+      ]
+    }
+  }
+}
