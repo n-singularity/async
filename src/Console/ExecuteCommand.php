@@ -1,5 +1,4 @@
 <?php
-
 namespace Nsingularity\Async\Console;
 
 use Illuminate\Console\Command;
