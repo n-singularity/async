@@ -1,3 +1,8 @@
+About
+------------
+this is a simple package for asynchronous laravel.
+Each task will be stored in the cache, and then will be executed in parallel with php artisan cli.
+
 Setup
 ------------
 
@@ -15,9 +20,6 @@ Nsingularity\Async\AsynchronousServiceProvider::class
 
 Basic Usage
 -----------
-
-Each task will be stored in the cache, and then will be executed in parallel with php artisan cli.
-
 This package supports three types of functions that can be run in parallel:
 
 #### 1. Global Function
