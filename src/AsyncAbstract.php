@@ -13,7 +13,7 @@ abstract class AsyncAbstract
         Cache::put($key, $payload, 1000);
 
         $basePath = str_replace(" ", "\ ", base_path());
-        $command  = 'cd ' . $basePath . ' && php artisan async --key=' . $key . ' > /dev/null &';
+        $command  = 'cd ' . $basePath . ' && php artisan async:execute --key=' . $key . ' > /dev/null &';
         $handler  = popen($command, "r");
         pclose($handler);
     }
