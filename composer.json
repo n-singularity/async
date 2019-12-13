@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Nsingularity\\async\\": "src/"
+      "Nsingularity\\Async\\": "src/"
     }
   },
   "autoload-dev": {
