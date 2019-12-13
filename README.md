@@ -50,10 +50,10 @@ function foo(){
 }
 ```
 
-#### 3. Object (must inplement AsyncableClassInterface)
+#### 3. Object (must inplements AsyncableClassInterface)
 
 ```php
-class Example implement AsyncableClassInterface
+class Example implements \Nsingularity\Async\AsyncableClassInterface
 {
     private $email;
     
