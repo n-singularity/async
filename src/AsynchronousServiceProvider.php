@@ -27,8 +27,6 @@ class AsynchronousServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfig();
-
         $this->commands([
             ExecuteCommand::class,
         ]);
