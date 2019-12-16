@@ -3,6 +3,7 @@ namespace Nsingularity\Async\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
+use Illuminate\Support\Facades\Cache;
 use LaravelDoctrine\Migrations\Configuration\ConfigurationProvider;
 use LaravelDoctrine\Migrations\Migrator;
 use Nsingularity\Async\Async;
@@ -31,6 +32,6 @@ class ExecuteCommand extends Command
     public function handle()
     {
         $key = $this->option('key');
-        $this->info(Async::run($key));
+        Async::run($key);
     }
 }
