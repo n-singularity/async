@@ -42,16 +42,14 @@ class AsyncPayloadMold
     public function handler()
     {
         if ($this->type == self::TYPE_GLOBAL_FUNCTION) {
-            call_user_func_array($this->function, $this->parameters);
+            return call_user_func_array($this->function, $this->parameters);
         } elseif ($this->type == self::TYPE_CLASS_FUNCTION) {
-            call_user_func_array([$this->classFunction, $this->function], $this->parameters);
+            return call_user_func_array([$this->classFunction, $this->function], $this->parameters);
         } elseif ($this->type == self::TYPE_CLASS_FUNCTION) {
             if ($this->asyncableClass instanceof AsyncableClassInterface) {
-                $this->asyncableClass->handler();
+                return $this->asyncableClass->handler();
             }
         }
-
-        call_user_func($this->function);
     }
 
 }

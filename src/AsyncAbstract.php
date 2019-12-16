@@ -7,6 +7,10 @@ use Illuminate\Support\Str;
 
 abstract class AsyncAbstract
 {
+    /**
+     * @param AsyncPayloadMold $payload
+     * @return AsyncHandler
+     */
     protected static function execute(AsyncPayloadMold $payload)
     {
         $key     = Str::random(6);
@@ -16,5 +20,7 @@ abstract class AsyncAbstract
         $command  = 'cd ' . $basePath . ' && php artisan async:execute --key=' . $key . ' > /dev/null &';
         $handler  = popen($command, "r");
         pclose($handler);
+
+        return new AsyncHandler($key);
     }
 }
