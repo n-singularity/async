@@ -24,7 +24,7 @@ class AsyncPayloadMold
     /** @var $function */
     private $function;
 
-    public function __construct($function, array $parameters = [], $type)
+    public function __construct($function, array $parameters = [], $type, array $options = [])
     {
         $this->type       = $type;
         $this->parameters = $parameters;
@@ -51,5 +51,4 @@ class AsyncPayloadMold
             }
         }
     }
-
 }
