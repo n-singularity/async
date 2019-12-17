@@ -100,7 +100,7 @@ function foo(){
     
     $te = time();
     
-    echo text1." | ".$text2." | ".$text3." | ".$te-ts; // hello world | hello hello | world world | 6
+    echo text1." | ".$text2." | ".$text3." | ".$te-$ts; // hello world | hello hello | world world | 6
 }
 
 ```
