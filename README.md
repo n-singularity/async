@@ -78,3 +78,29 @@ function foo(){
 }
 ```
 
+Get Response From Async
+-----------
+
+```php
+function createText($a, $b)
+{
+    sleep(5);
+    return $a . " " . $b;
+}
+
+function foo(){
+    $ts = time();
+    $handler1 = Nsingularity\Async\Async::globalFunction("createText" ,["hello","world"]);
+    $handler2 = Nsingularity\Async\Async::globalFunction("createText" ,["hello","hello"]);
+    $handler3 = Nsingularity\Async\Async::globalFunction("createText" ,["world","world"]);
+    
+    $text1 = $handler1->get();
+    $text2 = $handler2->get();
+    $text3 = $handler3->get();
+    
+    $te = time();
+    
+    echo text1." | ".$text2." | ".$text3." | ".$te-ts; // hello world | hello hello | world world | 6
+}
+
+```
